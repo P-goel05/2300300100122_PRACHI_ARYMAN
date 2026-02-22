@@ -1,6 +1,6 @@
-#include <vector>
-#include <iostream>
-using namespace std;
+// #include <vector>
+// #include <iostream>
+// using namespace std;
 
 class NumArray {
 public:
@@ -27,9 +27,9 @@ public:
 
         }
 };
-int main(){
-    vector<int> nums={2,4,5,7};
-    NumArray obj(nums);
+// int main(){
+//     vector<int> nums={2,4,5,7};
+//     NumArray obj(nums);
 
-    cout<<obj.sumRange(1,3);
-}
+//     cout<<obj.sumRange(1,3);
+// }
