@@ -9,7 +9,7 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    cout<<"enter the target element to be found for first occurencce:"<<endl;
+    cout<<"enter the target element to be found for first occurence:"<<endl;
     cin>>t;
     s=0;
     e=n-1;
@@ -17,10 +17,10 @@ int main(){
     while(s<=e){
         m=int(s+(e-s)/2);
         if(arr[m]==t){
-            ans=m;
-            e=m-1;
+            ans=m;//possible answers are stored in ans
+            e=m-1; // for first occurence we will search the left(first half) of the array
         }
-        else if(arr[m]<t){
+        else if(arr[m]<t){ //if the target is greater then we search the second half
             s=m+1;
         }
         else{
