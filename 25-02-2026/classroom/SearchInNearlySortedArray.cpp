@@ -12,10 +12,10 @@ int SearchInNearlySortedArray(vector<int>& arr, int target){
         if(arr[m]==target){
             ans=m;
         }
-        if(arr[m+1]==target){
+        if(arr[m+1]==target && m+1<=e){
             ans=m+1;
         }
-        if(arr[m-1]==target){
+        if(arr[m-1]==target && m-1>=s){
             ans=m-1;
         }
         if(arr[m]>target){ //left subarray
