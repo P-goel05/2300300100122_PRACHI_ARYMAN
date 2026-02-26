@@ -10,7 +10,7 @@ public:
         e=nums.size()-1;
         while(s<=e){
             if(nums[s]<=nums[e]){
-                return nums[s];
+                return nums[e];
             }
             m=int(s+(e-s)/2);
             if(nums[m]>nums[m+1] && m+1<=e){
