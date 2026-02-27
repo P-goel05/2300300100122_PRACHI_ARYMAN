@@ -51,6 +51,7 @@ bool BinarySearch(vector<int> arr, int target){
     // }
     //better
     for(i=0;i<r;i++){
+        // finding the row which can contain the target and then converting it row to single array and then applyiing BS
         if(mat[i][0]<=t && t<=mat[i][c-1]){
            if(BinarySearch(mat[i],t)){
             cout<<"element found"<<endl;
@@ -66,6 +67,7 @@ bool BinarySearch(vector<int> arr, int target){
     s=0;
     e=n*m-1;
     while(s<=e){
+        //assuming the matrix into one d array so we convert the index into row,col pair by the formula
         mid=int(s+(e-s)/2);
         row=mid/m;
         col=mid%m;
