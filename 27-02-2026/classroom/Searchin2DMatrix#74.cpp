@@ -21,7 +21,7 @@ bool BinarySearch(vector<int> arr, int target){
 
  }
  int main(){
-    int r,c,i=0,j=0,t;
+    int r,c,i=0,j=0,t,n,m,s,e,mid,row,col;
     
     cout<<"enter number of rows of matrix:"<<endl;
     cin>>r;
@@ -61,6 +61,26 @@ bool BinarySearch(vector<int> arr, int target){
         }
     }
     //optimal 
-    
+    n=mat.size();
+    m=mat[0].size();
+    s=0;
+    e=n*m-1;
+    while(s<=e){
+        mid=int(s+(e-s)/2);
+        row=mid/m;
+        col=mid%m;
+        if(mat[row][col]==t){
+            return true;
+        }
+        else if(mat[row][col]<t){
+            s=mid+1;
+        }
+        else if(mat[row][col]>t){
+            e=mid-1;
+        }
+        else{
+            return false;
+        }
+    }
     return 0;
  }
